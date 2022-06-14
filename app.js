@@ -3,32 +3,29 @@ const express = require('express');
 const app = express();
 const port = 3000;
 app.listen(port,()=>{
-console.log('Hello Foxes')
+
 });
 app.set('view engine','ejs');
 //routes
 app.get('/', (req,res)=>{
-    res.send('Hello Foxes')
+    
     res.render('pages/home')
-
+    res.send('Hello Foxes')
 })
+console.log('Hello Foxes')
 app.get('/login', (req,res)=>{
-    //res.send('Hello Foxes')
     res.render('pages/login')
 
 })
-app.get('/profile/', (req,res)=>{
-    //res.send('Hello Foxes')
+app.get('/profile', (req,res)=>{
     res.render('pages/profile')
 
 })
 app.get('/register', (req,res)=>{
-    //res.send('Hello Foxes')
     res.render('pages/register')
 
 })
 app.get('/user', (req,res)=>{
-    //res.send('Hello Foxes')
     res.render('pages/user')
 
 })
