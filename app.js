@@ -1,4 +1,9 @@
 const express = require('express');
+const dotenv = require('dotenv');
+const { connectDB } = require('./src/db')
+const { graphqlHTTP } = require('express-graphql')
+const schema = require('./src/graphql/schema')
+dotenv.config();
 
 const app = express();
 const port = 3000;
