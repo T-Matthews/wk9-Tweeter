@@ -7,6 +7,7 @@ const path = require.apply('path')
 const { authenticate } = require('./src/middleware/auth')
 dotenv.config();
 const cookieParser = require('cookie-parser')
+const { userData } = require('./src/middleware')
 
 app.set('view engine','ejs');
 //routes
@@ -41,6 +42,7 @@ app.set('view engine','ejs')
 connectDB();
 app.use(cookieParser())
 app.use(authenticate);
+app.use(userData);
 app.use('/graphql',grapqlHTTP({schema,graphiql:true}))
 app.set('views', path.join(__dirname, '/src/templates/views'))
 

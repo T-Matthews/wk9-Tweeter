@@ -50,17 +50,18 @@ const createPost = {
         title: {type: GraphQLString},
         userId:{type: GraphQLString}
     },
-    const post = new Post({
-        title: args.title,
-        text = args.text,
-        userId = args.userId
-    })
-    post.save()
-
-}
-const submitPost = {
-    type: GraphQLString,
-    args: {
+    async resolve(parent,args){
 
     }
 }
+//     const post = new Post({
+//         title: args.title,
+//         text = args.text,
+//         userId = args.userId
+//     })
+//     post.save()
+// const submitPost = {
+//     type: GraphQLString,
+//     args: {
+
+//     }}
